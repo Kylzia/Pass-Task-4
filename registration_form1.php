@@ -1,51 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="theme-cyan cdc-page-type-content cdc-2020" lang="en-us">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Vaccine Registration Form</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="home_files/bootstrap.css">
+    <link rel="stylesheet" href="home_files/app.css">
+       
+	<title>Vaccine Registration Form | COVID-19 Info Center</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">	
 </head>
 
 <body>
-    <h2>Vaccine Registration Form</h2>
-    <p>Please fill in this form and send us.</p>
-    <form action="registration_form1.php" method="post">
-        <p>
-            <label for="inputName">Name:<sup>*</sup></label>
-            <input type="text" name="name" id="inputName">
-        </p>
-        <p>
-            <label for="inputEmail">Email:<sup>*</sup></label>
-            <input type="text" name="email" id="inputEmail">
-        </p>
-        <p>
-            <label for="inputSubject">Contact Number:</label>
-            <input type="text" name="subject" id="inputSubject">
-        </p>
-		<p>
-			Gender:
-			<input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
-			<input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
-			<input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other
-		</p>
-		
-        <input type="submit" name="submit_btn" value="Submit">
-        <input type="reset" value="Reset">
-    </form>
+ 
+    <div class="container-fluid site-title">
+    <!-- <div class=""> -->
+        <div class="container">
+            <div class="row">
+                <h3>L1-team06</h3>
+            </div>
+        </div>
+    </div>
+  
+    <div id="cdc-meganav-wrapper">
+        
+        <div class="container" id="cdc-meganav-bar">
+            
+            <nav class="navbar navbar-expand-xl yamm">
+            
+                <ul class="nav navbar-nav nav-justified w-100">
+                  
+                    <li class="nav-item" id="menu_home">
+                        <a class="nav-link" href="home.html">
+                            Home						
+						</a>
+                    </li>
 
-    <?php
-		if(isset($_POST['submit_btn']))
-		{
-		  $name=$_POST['name'];
-		  $email=$_POST['email'];
-		  $subject=$_POST['subject'];
-		  $gender=$_POST['gender'];
-		  $text = $name . "," . $email . "," . $subject . "," . $gender .  "\n";
-		  $fp = fopen('form.txt', 'a+');
-		  fwrite($fp, $text);
-		  fclose ($fp);    
+                    <li class="nav-item" id="menu1">
+                        <a class="nav-link" href="page1.html">
+                            Pfizer-BioNTech Vaccine		
+						</a>
+                    </li>
 
-          header("Location: thankyou_page.html");
-		}
-    ?>
+                    <li class="nav-item" id="menu2">
+                        <a class="nav-link" href="page2.html">
+                            Johnson and Johnson Vaccine						
+						</a>
+                    </li>
+
+                    <li class="nav-item" id="menu3">
+                        <a class="nav-link" href="page3.html">
+                            ZF2001 Vaccine						
+						</a>
+                    </li>
+
+                    <li class="nav-item" id="menu4">
+                        <a class="nav-link" href="page4.html">
+                            Sinovac Vaccine						
+						</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+	       
+    <!-- Page Content Wrap -->
+    <div class="container d-flex flex-wrap body-wrapper bg-white">
+    
+        <!-- Content -->
+        <main class="col-xl-9 order-xl-2">
+
+            <div class="row">
+             
+                <div class="col content">
+                
+                    <div class="row">
+                        <h2 id="content" class="open d-lg-block">Please fill in this form and send us.</h2>
+                        <br>
+                        <br>
+                        <br>
+                        
+                    </div>
+					
+                 
+                </div>
+            </div>
+				<br>			
+				<form action="registration_form1.php" method="post">
+						<p>
+							<label for="inputName">Name:<sup>*</sup></label>
+							<input type="text" name="name" id="inputName">
+						</p>
+						<p>
+							<label for="inputEmail">Email:<sup>*</sup></label>
+							<input type="text" name="email" id="inputEmail">
+						</p>
+						<p>
+							<label for="inputSubject">Contact Number:</label>
+							<input type="text" name="subject" id="inputSubject">
+						</p>
+						<p>
+							Gender:
+							<input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
+							<input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
+							<input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other
+						</p>
+						
+						<input type="submit" name="submit_btn" value="Submit">
+						<input type="reset" value="Reset">
+					</form>
+					
+				<?php
+					if(isset($_POST['submit_btn']))
+					{
+					  $name=$_POST['name'];
+					  $email=$_POST['email'];
+					  $subject=$_POST['subject'];
+					  $gender=$_POST['gender'];
+					  $text = $name . "," . $email . "," . $subject . "," . $gender .  "\n";
+					  $fp = fopen('form.txt', 'a+');
+					  fwrite($fp, $text);
+					  fclose ($fp);    
+
+					  header("Location: thankyou_page.html");
+					}
+				?>
+          <br>
+     
+        </main>
+    						
+    </div> 
+            
+    <div class="container-fluid">
+        <div class="container">
+        
+            <div class="card-body bg-quaternary">
+                    
+                <h5>Disclaimer</h5>
+                <p style="font-size:14px;">This website is created mainly for educational and non-commercial use only. It is a 
+                partial fulfillment for completion of unit SWE20001 - Development Project 1 offered in 
+                Swinburne University of Technology, Sarawak Campus. The web-master and author(s) do not 
+                represent the business entity. The content of the pages of this website might be out-dated 
+                or inaccurate, thus, the author(s) and web-master does not take any responsibility for 
+                incorrect information disseminated or cited from this website.</p>
+             
+            </div>
+			<br/>
+        </div>
+    </div>
+    
 </body>
 </html>

@@ -1,0 +1,5 @@
+Seb,sebastianpat407@gmail.com,3123441234,male
+123123,21323,12312,male
+23123,123,1232312,female
+Sen,Sen@gmail.com,12345123,female
+Seb,Seb@gmail.com,1234127463,male
