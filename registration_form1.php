@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Vaccine Registration Form</title>
 </head>
+
 <body>
     <h2>Vaccine Registration Form</h2>
     <p>Please fill in this form and send us.</p>
@@ -30,8 +31,8 @@
         <input type="submit" name="submit_btn" value="Submit">
         <input type="reset" value="Reset">
     </form>
-	
-	<?php
+
+    <?php
 		if(isset($_POST['submit_btn']))
 		{
 		  $name=$_POST['name'];
@@ -42,7 +43,9 @@
 		  $fp = fopen('form.txt', 'a+');
 		  fwrite($fp, $text);
 		  fclose ($fp);    
+
+          header("Location: thankyou_page.html");
 		}
-	?>
+    ?>
 </body>
 </html>
