@@ -33,7 +33,7 @@
             
                 <ul class="nav navbar-nav nav-justified w-100">
                   
-                    <li class="nav-item" id="menu_home">
+                    <li class="nav-item" id="menu-home">
                         <a class="nav-link" href="home.html">
                             Home						
 						</a>
