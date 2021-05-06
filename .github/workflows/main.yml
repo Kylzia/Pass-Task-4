@@ -17,7 +17,7 @@ jobs:
       - name: Lint Super-Linter
         uses: github/super-linter@v3
         env:
-          DEFAULT_BRANCH: main
+          DEFAULT_BRANCH: sprint_2_submission
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_CSS: false
           # VALIDATE_ALL_CODEBASE: false
