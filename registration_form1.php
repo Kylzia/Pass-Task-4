@@ -89,50 +89,53 @@
                  
                 </div>
             </div>
-                <br>            
-                <form action="registration_form1.php" method="post">
-                    <p>
-                        <label for="inputName">Name:<sup>*</sup></label>
-                        <input type="text" name="name" id="inputName">
-                    </p>
-                    <p>
-                        <label for="NRIC">Identification Number:<sup>*</sup></label>
-                        <input type="text" name="nric" id="nric">
-                    </p>
-                    <p>
-                        <label for="inputEmail">Email:<sup>*</sup></label>
-                        <input type="text" name="email" id="inputEmail">
-                    </p>
-                    <p>
-                        <label for="inputSubject">Contact Number:</label>
-                        <input type="text" name="subject" id="inputSubject">
-                    </p>
-                    <p>
-                        Gender:
-                        <input type="radio" name="gender" <?php if (isset($gender) && $gender == "female") echo "checked";?> value="female">Female
-                        <input type="radio" name="gender" <?php if (isset($gender) && $gender == "male") echo "checked";?> value="male">Male
-                        <input type="radio" name="gender" <?php if (isset($gender) && $gender == "other") echo "checked";?> value="other">Other
-                    </p>
-                    
-                    <input type="submit" name="submit_btn" value="Submit">
-                    <input type="reset" value="Reset">
-                </form>
-                    
-                <?php
-                    if(isset($_POST['submit_btn']))
-                    {
-                      $name = $_POST['name'];
-                      $nric = $_POST['nric'];
-                      $email = $_POST['email'];
-                      $subject = $_POST['subject'];
-                      $gender = $_POST['gender'];
-                      $text = $name . "," . $nric . "," . $email . "," . $subject . "," . $gender .  "\n";
-                      file_put_contents($_POST['nric'] . '.txt', $text);    
+            <br>            
+            <form action="registration_form1.php" method="post">
+                <label for="inputName">Name:<sup>*</sup></label>
+                <input type="text" name="name" id="inputName">
+            
+                <br>
+                <br>
+                <label for="NRIC">Identification Number:<sup>*</sup></label>
+                <input type="text" name="nric" id="nric">
+            
+                <br>
+                <br>
+                <label for="inputEmail">Email:<sup>*</sup></label>
+                <input type="text" name="email" id="inputEmail">
+            
+                <br>
+                <br>
+                <label for="inputSubject">Contact Number:</label>
+                <input type="text" name="subject" id="inputSubject">
+                
+                <br>
+                <br>
+                <label for="inputSubject">Gender:</label>
+                <input type="radio" name="gender" id="inputEmail" <?php if (isset($gender) && $gender == "female") echo "checked";?> value="female">Female
+                <input type="radio" name="gender" id="inputEmail" <?php if (isset($gender) && $gender == "male") echo "checked";?> value="male">Male
+                <input type="radio" name="gender" id="inputEmail" <?php if (isset($gender) && $gender == "other") echo "checked";?> value="other">Other
+                
+                <br>
+                <br>
+                <input type="submit" name="submit_btn" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+                
+            <?php
+                if(isset($_POST['submit_btn'])) {
+                    $name = $_POST['name'];
+                    $nric = $_POST['nric'];
+                    $email = $_POST['email'];
+                    $subject = $_POST['subject'];
+                    $gender = $_POST['gender'];
+                    $text = $name . "," . $nric . "," . $email . "," . $subject . "," . $gender .  "\n";
+                    file_put_contents($_POST['nric'] . '.txt', $text);    
 
-                      header("Location: thankyou_page.html");
-                    }
-                ?>
-          <br>
+                    header("Location: thankyou_page.html");
+                }
+            ?>
+            <br>
      
         </main>
                             

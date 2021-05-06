@@ -89,30 +89,28 @@
                  
                 </div>
             </div>
-                <br>            
-                <form action="check.php" method="post">
-                        <p>
-                            <label for="ICcheck">Identification Num:<sup>*</sup></label>
-                            <input type="text" name="nric" id="nric">
-                        </p>
-                        <input type="submit" name="submit_btn" value="Submit">
-                        <input type="reset" value="Reset">
-                    </form>
-                    
-                <?php
-                    if(isset($_POST['submit_btn'])) {
-                        if (file_exists($_POST['nric'] . '.txt')){
-                            echo '<h3>You are already registered!</h3>';
-                        } else {
-                            echo '<h3>You have not registered!</h3><br>';
-                            echo '<a href ="registration_form1.php">Register here</a>';
-                        }
+            <br>            
+            <form action="check.php" method="post">
+                    <p>
+                        <label for="ICcheck">Identification Num:<sup>*</sup></label>
+                        <input type="text" name="nric" id="nric">
+                    </p>
+                    <input type="submit" name="submit_btn" value="Submit">
+                    <input type="reset" value="Reset">
+            </form>
+                
+            <?php
+                if(isset($_POST['submit_btn'])) {
+                    if (file_exists($_POST['nric'] . '.txt')) {
+                        echo '<h3>You are already registered!</h3>';
+                    } else {
+                        echo '<h3>You have not registered!</h3><br>';
+                        echo '<a href ="registration_form1.php">Register here</a>';
                     }
-                ?>
-          <br>
-     
+                }
+            ?>
+            <br>
         </main>
-                            
     </div> 
             
     <div class="container-fluid">
