@@ -3,15 +3,15 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="home_files/bootstrap.css">
     <link rel="stylesheet" href="home_files/app.css">
        
-	<title>Vaccine Registration Form | COVID-19 Info Center</title>
+    <title>Vaccine Registration Form | COVID-19 Info Center</title>
     <meta name="description" content="">
-    <meta name="keywords" content="">	
+    <meta name="keywords" content="">    
 </head>
 
 <body>
@@ -35,39 +35,39 @@
                   
                     <li class="nav-item" id="menu-home">
                         <a class="nav-link" href="home.html">
-                            Home						
-						</a>
+                            Home                        
+                        </a>
                     </li>
 
                     <li class="nav-item" id="menu1">
                         <a class="nav-link" href="page1.html">
-                            Pfizer-BioNTech Vaccine		
-						</a>
+                            Pfizer-BioNTech Vaccine        
+                        </a>
                     </li>
 
                     <li class="nav-item" id="menu2">
                         <a class="nav-link" href="page2.html">
-                            Johnson and Johnson Vaccine						
-						</a>
+                            Johnson and Johnson Vaccine                        
+                        </a>
                     </li>
 
                     <li class="nav-item" id="menu3">
                         <a class="nav-link" href="page3.html">
-                            ZF2001 Vaccine						
-						</a>
+                            ZF2001 Vaccine                        
+                        </a>
                     </li>
 
                     <li class="nav-item" id="menu4">
                         <a class="nav-link" href="page4.html">
-                            Sinovac Vaccine						
-						</a>
+                            Sinovac Vaccine                        
+                        </a>
                     </li>
 
                 </ul>
             </nav>
         </div>
     </div>
-	       
+           
     <!-- Page Content Wrap -->
     <div class="container d-flex flex-wrap body-wrapper bg-white">
     
@@ -85,57 +85,57 @@
                         <br>
                         
                     </div>
-					
+                    
                  
                 </div>
             </div>
-				<br>			
-				<form action="registration_form1.php" method="post">
-						<p>
-							<label for="inputName">Name:<sup>*</sup></label>
-							<input type="text" name="name" id="inputName">
-						</p>
-						<p>
-							<label for="NRIC">Identification Number:<sup>*</sup></label>
-							<input type="text" name="nric" id="nric">
-						</p>
-						<p>
-							<label for="inputEmail">Email:<sup>*</sup></label>
-							<input type="text" name="email" id="inputEmail">
-						</p>
-						<p>
-							<label for="inputSubject">Contact Number:</label>
-							<input type="text" name="subject" id="inputSubject">
-						</p>
-						<p>
-							Gender:
-							<input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
-							<input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
-							<input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other
-						</p>
-						
-						<input type="submit" name="submit_btn" value="Submit">
-						<input type="reset" value="Reset">
-					</form>
-					
-				<?php
-					if(isset($_POST['submit_btn']))
-					{
-					  $name=$_POST['name'];
-					  $nric=$_POST['nric'];
-					  $email=$_POST['email'];
-					  $subject=$_POST['subject'];
-					  $gender=$_POST['gender'];
-					  $text = $name . "," . $nric . "," . $email . "," . $subject . "," . $gender .  "\n";
-					  file_put_contents($_POST['nric'] . '.txt', $text);    
+                <br>            
+                <form action="registration_form1.php" method="post">
+                    <p>
+                        <label for="inputName">Name:<sup>*</sup></label>
+                        <input type="text" name="name" id="inputName">
+                    </p>
+                    <p>
+                        <label for="NRIC">Identification Number:<sup>*</sup></label>
+                        <input type="text" name="nric" id="nric">
+                    </p>
+                    <p>
+                        <label for="inputEmail">Email:<sup>*</sup></label>
+                        <input type="text" name="email" id="inputEmail">
+                    </p>
+                    <p>
+                        <label for="inputSubject">Contact Number:</label>
+                        <input type="text" name="subject" id="inputSubject">
+                    </p>
+                    <p>
+                        Gender:
+                        <input type="radio" name="gender" <?php if (isset($gender) && $gender == "female") echo "checked";?> value="female">Female
+                        <input type="radio" name="gender" <?php if (isset($gender) && $gender == "male") echo "checked";?> value="male">Male
+                        <input type="radio" name="gender" <?php if (isset($gender) && $gender == "other") echo "checked";?> value="other">Other
+                    </p>
+                    
+                    <input type="submit" name="submit_btn" value="Submit">
+                    <input type="reset" value="Reset">
+                </form>
+                    
+                <?php
+                    if(isset($_POST['submit_btn']))
+                    {
+                      $name = $_POST['name'];
+                      $nric = $_POST['nric'];
+                      $email = $_POST['email'];
+                      $subject = $_POST['subject'];
+                      $gender = $_POST['gender'];
+                      $text = $name . "," . $nric . "," . $email . "," . $subject . "," . $gender .  "\n";
+                      file_put_contents($_POST['nric'] . '.txt', $text);    
 
-					  header("Location: thankyou_page.html");
-					}
-				?>
+                      header("Location: thankyou_page.html");
+                    }
+                ?>
           <br>
      
         </main>
-    						
+                            
     </div> 
             
     <div class="container-fluid">
@@ -152,7 +152,7 @@
                 incorrect information disseminated or cited from this website.</p>
              
             </div>
-			<br/>
+            <br/>
         </div>
     </div>
     

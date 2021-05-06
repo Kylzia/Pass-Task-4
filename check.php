@@ -3,15 +3,15 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="home_files/bootstrap.css">
     <link rel="stylesheet" href="home_files/app.css">
        
-	<title>Vaccine Registration Form | COVID-19 Info Center</title>
+    <title>Vaccine Registration Form | COVID-19 Info Center</title>
     <meta name="description" content="">
-    <meta name="keywords" content="">	
+    <meta name="keywords" content="">    
 </head>
 
 <body>
@@ -35,39 +35,39 @@
                   
                     <li class="nav-item" id="menu-home">
                         <a class="nav-link" href="home.html">
-                            Home						
-						</a>
+                            Home                        
+                        </a>
                     </li>
 
                     <li class="nav-item" id="menu1">
                         <a class="nav-link" href="page1.html">
-                            Pfizer-BioNTech Vaccine		
-						</a>
+                            Pfizer-BioNTech Vaccine        
+                        </a>
                     </li>
 
                     <li class="nav-item" id="menu2">
                         <a class="nav-link" href="page2.html">
-                            Johnson and Johnson Vaccine						
-						</a>
+                            Johnson and Johnson Vaccine                        
+                        </a>
                     </li>
 
                     <li class="nav-item" id="menu3">
                         <a class="nav-link" href="page3.html">
-                            ZF2001 Vaccine						
-						</a>
+                            ZF2001 Vaccine                        
+                        </a>
                     </li>
 
                     <li class="nav-item" id="menu4">
                         <a class="nav-link" href="page4.html">
-                            Sinovac Vaccine						
-						</a>
+                            Sinovac Vaccine                        
+                        </a>
                     </li>
 
                 </ul>
             </nav>
         </div>
     </div>
-	       
+           
     <!-- Page Content Wrap -->
     <div class="container d-flex flex-wrap body-wrapper bg-white">
     
@@ -85,36 +85,34 @@
                         <br>
                         
                     </div>
-					
+                    
                  
                 </div>
             </div>
-				<br>			
-				<form action="check.php" method="post">
-						<p>
-							<label for="ICcheck">Identification Num:<sup>*</sup></label>
-							<input type="text" name="nric" id="nric">
-						</p>
-						<input type="submit" name="submit_btn" value="Submit">
-						<input type="reset" value="Reset">
-					</form>
-					
-				<?php
-					if(isset($_POST['submit_btn']))
-					{
-						if (file_exists($_POST['nric'] . '.txt')){
-							echo '<h3>You are already registered!</h3>';
-						}
-						else{
-							echo '<h3>You have not registered!</h3><br>';
-							echo '<a href ="registration_form1.php">Register here</a>';
-						}
-					}
-				?>
+                <br>            
+                <form action="check.php" method="post">
+                        <p>
+                            <label for="ICcheck">Identification Num:<sup>*</sup></label>
+                            <input type="text" name="nric" id="nric">
+                        </p>
+                        <input type="submit" name="submit_btn" value="Submit">
+                        <input type="reset" value="Reset">
+                    </form>
+                    
+                <?php
+                    if(isset($_POST['submit_btn'])) {
+                        if (file_exists($_POST['nric'] . '.txt')){
+                            echo '<h3>You are already registered!</h3>';
+                        } else {
+                            echo '<h3>You have not registered!</h3><br>';
+                            echo '<a href ="registration_form1.php">Register here</a>';
+                        }
+                    }
+                ?>
           <br>
      
         </main>
-    						
+                            
     </div> 
             
     <div class="container-fluid">
@@ -131,7 +129,7 @@
                 incorrect information disseminated or cited from this website.</p>
              
             </div>
-			<br/>
+            <br/>
         </div>
     </div>
     
