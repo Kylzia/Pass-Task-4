@@ -112,9 +112,9 @@
                 <br>
                 <br>
                 <label for="inputSubject">Gender:</label>
-                <input type="radio" name="gender" id="inputEmail" <?php if (isset($gender) && $gender == "female") echo "checked";?> value="female">Female
-                <input type="radio" name="gender" id="inputEmail" <?php if (isset($gender) && $gender == "male") echo "checked";?> value="male">Male
-                <input type="radio" name="gender" id="inputEmail" <?php if (isset($gender) && $gender == "other") echo "checked";?> value="other">Other
+                <input type="radio" name="gender" id="inputEmail"<?php if(isset($gender) && $gender == "female") echo"checked";?> value="female"> Female
+                <input type="radio" name="gender" id="inputEmail"<?php if(isset($gender) && $gender == "male") echo"checked";?> value="male"> Male
+                <input type="radio" name="gender" id="inputEmail"<?php if(isset($gender) && $gender == "other") echo"checked";?> value="other"> Other
                 
                 <br>
                 <br>
@@ -131,8 +131,8 @@
                     $gender = $_POST['gender'];
                     $text = $name . "," . $nric . "," . $email . "," . $subject . "," . $gender .  "\n";
                     file_put_contents($_POST['nric'] . '.txt', $text);    
-
-                    header("Location: thankyou_page.html");
+					
+					echo("<script>location.href = 'thankyou_page.html?msg=$msg';</script>");
                 }
             ?>
             <br>
