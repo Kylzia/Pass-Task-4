@@ -132,7 +132,7 @@
                     $text = $name . "," . $nric . "," . $email . "," . $subject . "," . $gender .  "\n";
                     file_put_contents($_POST['nric'] . '.txt', $text);    
 					
-					echo("<script>location.href = 'thankyou_page.html?msg=$msg';</script>");
+					echo("<script>window.location = 'thankyou_page.html';</script>");
                 }
             ?>
             <br>
